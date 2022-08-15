@@ -1,0 +1,14 @@
+body {
+    background-color:rgba(153, 205, 50, 0.604);
+}
+
+.padding {
+    padding-top: 2em;
+}
+
+.img-size {
+    width: 30em;
+    height: 15ems;
+}
+
+

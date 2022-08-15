@@ -5,13 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./main.js"></script>
+    <script src="./db.js"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
     <title>Document</title>
 </head>
 <body>
-    <main>
-        <h1>
-            Desafio Complementario!
-        </h1>
+    <main class="container padding">
+        <img src="./img/Billetes-de-dolar-27.gif" alt="billete dolar" class="img-size">
+        <h3 class="container padding">CASA DE CAMBIO</h3>
+        <form class="container py2">
+            <p>Seleccionar moneda a cambiar:</p>
+            <input type="radio" name="cambio" id="uno">Dolar
+            <input type="radio" name="cambio" id="dos">Euro
+            <p>Ingrese monto a cambiar</p>
+            <input type="number" id="valor" min="1" max="10000">
+            <input type="button" id="cotizador" value="Cotizar" onclick="convertir()">
+        </form>
+        <div>
+            <p class="lead container">Agregue monedas</p>
+            <form class="container">
+                <input id="moneda" type="text" placeholder="Ingrese la moneda" class="form-control my-2">
+                <input id="cambio" type="text" placeholder="ingrese cambio en pesos" class="form-control my-2">
+                <button id="boton" class="btn btn-success" type="reset" onclick="capturar();">Agregar</button>
+            </form>
+        </div>
+        <div id="root"></div>
+        <div class="container">
+            <table class="table" id="tabla">
+                <thead class="thead-inverse">
+                    <tr>
+                        <th>Moneda</th>
+                        <th>Cambio</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
     </main>
 </body>
 </html>
